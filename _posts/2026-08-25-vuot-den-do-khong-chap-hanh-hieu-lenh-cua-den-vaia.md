@@ -15,7 +15,6 @@ author: "LuatNao AI Intelligence"
 
 ---
 
-
 # 승용차와 오토바이의 신호위반 벌금 금액 및 처벌 수위를 비교해줘
 
 ## 📝 1. Overview & Legal Basis
@@ -23,21 +22,6 @@ author: "LuatNao AI Intelligence"
 베트남 도로교통법상 오토바이(xe mô tô)의 신호위반(교통신호등 지시 불이행) 행위는 **Nghị định 168/2024/NĐ-CP** 제7조 제7항 c목([오토바이 신호위반 벌금 규정]) 및 제13항 b목([오토바이 신호위반 벌점 규정])에 의거하여 엄격하게 처벌됩니다[^1]. 
 
 반면, 본 제공된 법적 데이터베이스 내에는 **승용차(xe ô tô)의 신호위반**에 대한 구체적인 벌금 및 행정처분 규정이 포함되어 있지 않습니다. 따라서 본 답변에서는 제공된 법령에 명시된 오토바이의 처벌 기준을 상세히 설명하고, 승용차 관련 규정은 데이터베이스 미검출로 안내해 드립니다.
-
-<details>
-<summary>🔍 AI Statutory Reasoning Process (Click to expand)</summary>
-
-### Step 1: Base Requirement & Fine/Value Verification
-- **오토바이 (Xe mô tô) 신호위반**: 관련 법령인 Nghị định 168/2024/NĐ-CP 제7조 제7항 c목("Không chấp hành hiệu lệnh của đèn tín hiệu giao thông")에 따라, 교통신호등의 지시를 준수하지 않은 운전자에게는 **4,000,000동 이상 6,000,000동 이하(400만 ~ 600만 동)**의 벌금이 부과됩니다.
-- **승용차 (Xe ô tô) 신호위반**: 제공된 법적 데이터베이스 내에 승용차(xe ô tô)의 신호위반에 대한 구체적인 벌금 조항이 존재하지 않습니다.
-
-### Step 2: Additional Measures Reference List & Direct 1:1 Cross-Check
-- **추가 제재 규정 확인**: Nghị định 168/2024/NĐ-CP 제7조 제13항 b목은 제7조 제7항 c목, d목, đ목 위반 시 운전면허증 벌점 4점을 감점("trừ điểm giấy phép lái xe 04 điểm")하도록 규정하고 있습니다.
-- **Direct 1:1 Cross-Check Result**:
-  - 오토바이 신호위반 (제7조 제7항 c목): 벌점 4점 감점 적용 (제7조 제13항 b목과 1:1 매칭 완료)
-  - 승용차 신호위반: 제공된 데이터베이스 내 관련 제재 규정 없음
-
-</details>
 
 ## 📋 2. Comprehensive Penalty Table
 
@@ -56,7 +40,6 @@ author: "LuatNao AI Intelligence"
 ## 📚 4. References
 [^1]: Nghị định 168/2024/NĐ-CP (제7조)
 [^2]: Nghị định 100/2019/NĐ-CP (제3조)
-
 
 ---
 
