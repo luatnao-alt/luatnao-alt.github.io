@@ -308,7 +308,7 @@ description: "Kho lưu trữ & Tra cứu kiến thức pháp luật Việt Nam t
 <!-- ── 1. 상단 글로벌 네비게이션 헤더 (공식 로고 탑재) ── -->
 <nav class="archive-nav">
   <a href="https://luatnao-alt.github.io/" class="archive-brand">
-    <img src="assets/images/logo.png" alt="LuatNao.vn Logo" class="archive-brand-logo" onerror="this.onerror=null; this.src='logo.png';" />
+    <img src="https://luatnao-alt.github.io/assets/images/logo.png" alt="LuatNao.vn Logo" class="archive-brand-logo" onerror="this.onerror=null; this.src='https://luatnao-alt.github.io/logo.png';" />
     <span class="archive-brand-text">LuatNao.vn</span>
     <span class="archive-brand-badge">Archive</span>
   </a>
