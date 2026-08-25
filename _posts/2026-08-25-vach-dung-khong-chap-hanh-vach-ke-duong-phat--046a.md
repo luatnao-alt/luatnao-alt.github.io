@@ -15,7 +15,6 @@ author: "LuatNao AI Intelligence"
 
 ---
 
-
 # 정지선 위반시 벌금과 벌점은 ?
 
 베트남 도로교통법상 **정지선 위반**은 크게 두 가지 유형으로 구분되어 처벌됩니다. 첫째는 단순 노면 표시(정지선 등) 및 지시 표지판 위반이며, 둘째는 신호등의 지시를 따르지 않고 정지선을 침범하거나 신호를 위반한 경우(신호위반)입니다. 
@@ -23,30 +22,6 @@ author: "LuatNao AI Intelligence"
 현재 시행 중인 정부 시행령 **Nghị định 168/2024/NĐ-CP**(자동차) [^1] 및 **Nghị định 100/2019/NĐ-CP**(오토바이) [^6]에 따른 상세 처벌 기준은 다음과 같습니다.
 
 ---
-
-<details>
-<summary>🔍 AI Statutory Reasoning Process (Click to expand)</summary>
-
-### Step 1: Base Requirement & Fine/Value Verification
-- **Item 1 (자동차 - 단순 표지/노면표지 위반):** Điều 6 Khoản 1 điểm a Nghị định 168/2024/NĐ-CP. 행위: "Không chấp hành hiệu lệnh, chỉ dẫn của biển báo hiệu, vạch kẻ đường". 벌금: 400,000 ~ 600,000 VND [^1].
-- **Item 2 (자동차 - 신호등 지시 불이행):** Điều 6 Khoản 9 điểm b Nghị định 168/2024/NĐ-CP. 행위: "Không chấp hành hiệu lệnh của đèn tín hiệu giao thông". 벌금: 18,000,000 ~ 20,000,000 VND [^1].
-- **Item 3 (오토바이 - 단순 표지/노면표지 위반):** Điều 6 Khoản 1 điểm a Nghị định 100/2019/NĐ-CP. 행위: "Không chấp hành hiệu lệnh, chỉ dẫn của biển báo hiệu, vạch kẻ đường". 벌금: 100,000 ~ 200,000 VND [^6].
-- **Item 4 (오토바이 - 신호등 지시 불이행):** Điều 6 Khoản 4 điểm e Nghị định 100/2019/NĐ-CP. 행위: "Không chấp hành hiệu lệnh của đèn tín hiệu giao thông". 벌금: 600,000 ~ 1,000,000 VND [^6].
-
-### Step 2: Additional Measures Reference List & Direct 1:1 Cross-Check
-- **자동차 감점 기준 (Nghị định 168/2024/NĐ-CP 제6조 제16항):**
-  - 제16항 a목: 2점 감점 (대상: điểm h, i khoản 3; điểm a, b, c, d, đ, g khoản 4; điểm a, b, c, d, đ, e, g, i, k, n, o khoản 5)
-  - 제16항 b목: 4점 감점 (대상: điểm h khoản 5; khoản 6; điểm b khoản 7; điểm b, c, d khoản 9)
-- **오토바이 행정처분 기준 (Nghị định 100/2019/NĐ-CP 제6조 제10항):**
-  - 제10항 b목: 면허정지 1~3개월 (대상: điểm b, e, i khoản 3; điểm đ, e, g, h khoản 4; khoản 5)
-  - 제10항 c목: 사고 유발 시 면허정지 2~4개월 (대상: điểm a, g, h, k, l, m, n, q khoản 1; điểm b, d, e, g, l, m khoản 2; điểm b, c, k, m khoản 3; điểm đ, e, g, h khoản 4)
-
-- **[Direct 1:1 Cross-Check Result]:**
-  - **Item 1 (자동차 단순 위반):** 제16항에 해당 없음 -> **벌점 없음**
-  - **Item 2 (자동차 신호 위반):** 제9항 b목은 제16항 b목에 매칭됨 -> **4점 감점**
-  - **Item 3 (오토바이 단순 위반):** 제10항 b목에 해당 없음. 단, 사고 유발 시 제10항 c목에 따라 **면허정지 2~4개월**
-  - **Item 4 (오토바이 신호 위반):** 제4항 e목은 제10항 b목에 매칭됨 -> **면허정지 1~3개월** (사고 유발 시 제10항 c목에 따라 **면허정지 2~4개월**)
-</details>
 
 ---
 
@@ -81,7 +56,6 @@ author: "LuatNao AI Intelligence"
   ]
 }
 ```
-
 
 ---
 
