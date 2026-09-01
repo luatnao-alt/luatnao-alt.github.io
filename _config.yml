@@ -1,6 +1,6 @@
 title: "Kho Kiến Thức & Hỏi Đáp Pháp Luật Việt Nam - LuatNao.vn"
 description: "Kho lưu trữ & Tra cứu kiến thức pháp luật Việt Nam thời gian thực. Hệ thống tự động phân tích & đối chiếu đa tầng các Nghị định, Thông tư và quy định hiện hành."
-url: "https://luatnao-alt.github.io"
+url: "https://blog.luatnao.vn"
 baseurl: ""
 
 # Jekyll SEO & Sitemap 플러그인
@@ -25,7 +25,3 @@ social:
   name: "LuatNao.vn"
   links:
     - "https://luatnao.vn"
-
-favicon: "/favicon.png"
-
-google_analytics: "G-YM0EB4X8WN"
