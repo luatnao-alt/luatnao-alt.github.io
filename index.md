@@ -1,13 +1,14 @@
 ---
 layout: default
-title: "Kho Kiến Thức & Kho Kiến Thức & Tra Cứu Tri Thức Pháp Luật Việt Nam - LuatNao.vn"
+title: "Kho Kiến Thức & Hỏi Đáp Pháp Luật Việt Nam - LuatNao.vn"
 description: "Kho lưu trữ & Tra cứu kiến thức pháp luật Việt Nam thời gian thực. Hệ thống AI phân tích và đối chiếu đa tầng Nghị định, Thông tư hiện hành."
 ---
 
-<!-- ── 상단 커스텀 스타일 ── -->
+<!-- ── 상단 커스텀 스타일 (디자인 시스템 & 페이징 UI) ── -->
 <style>
   :root {
     --brand-primary: #2563eb;
+    --brand-primary-hover: #1d4ed8;
     --brand-dark: #0f172a;
     --brand-gradient: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
     --card-bg: #ffffff;
@@ -37,14 +38,19 @@ description: "Kho lưu trữ & Tra cứu kiến thức pháp luật Việt Nam t
     text-decoration: none;
   }
   .archive-brand-logo {
-    width: 32px;
-    height: 32px;
+    width: 34px;
+    height: 34px;
     object-fit: contain;
     border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(37, 99, 235, 0.3);
+    background: transparent;
+    filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.3));
+    transition: transform 0.2s ease;
+  }
+  .archive-brand:hover .archive-brand-logo {
+    transform: scale(1.06);
   }
   .archive-brand-text {
-    font-size: 16px;
+    font-size: 17px;
     font-weight: 800;
     color: #ffffff;
     letter-spacing: -0.02em;
@@ -55,14 +61,15 @@ description: "Kho lưu trữ & Tra cứu kiến thức pháp luật Việt Nam t
     background: rgba(59, 130, 246, 0.2);
     color: #60a5fa;
     border: 1px solid rgba(59, 130, 246, 0.4);
-    padding: 2px 6px;
-    border-radius: 4px;
+    padding: 2px 7px;
+    border-radius: 6px;
     text-transform: uppercase;
+    letter-spacing: 0.04em;
   }
   .archive-nav-links {
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 6px;
     flex-wrap: wrap;
   }
   .archive-nav-link {
@@ -70,7 +77,7 @@ description: "Kho lưu trữ & Tra cứu kiến thức pháp luật Việt Nam t
     text-decoration: none;
     font-size: 13.5px;
     font-weight: 600;
-    padding: 6px 12px;
+    padding: 7px 13px;
     border-radius: 8px;
     transition: all 0.2s;
   }
@@ -161,13 +168,14 @@ description: "Kho lưu trữ & Tra cứu kiến thức pháp luật Việt Nam t
   }
   .search-count-bar {
     margin-top: 12px;
-    font-size: 12.5px;
+    font-size: 13px;
     color: #64748b;
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
     gap: 8px;
+    font-weight: 500;
   }
 
   /* 카드 그리드 */
@@ -175,7 +183,8 @@ description: "Kho lưu trữ & Tra cứu kiến thức pháp luật Việt Nam t
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
     gap: 18px;
-    margin-bottom: 40px;
+    margin-bottom: 32px;
+    min-height: 200px;
   }
   .post-card {
     background: #ffffff;
@@ -269,6 +278,66 @@ description: "Kho lưu trữ & Tra cứu kiến thức pháp luật Việt Nam t
     text-decoration: underline;
   }
 
+  /* ── 🌟 모던 페이징 컨트롤 바 (Pagination Bar) ── */
+  .pagination-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    margin: 36px 0 20px 0;
+    flex-wrap: wrap;
+    user-select: none;
+  }
+  .page-btn {
+    min-width: 38px;
+    height: 38px;
+    padding: 0 10px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13.5px;
+    font-weight: 600;
+    color: #334155;
+    background: #ffffff;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.15s ease;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+  }
+  .page-btn:hover:not(:disabled) {
+    background: #f1f5f9;
+    border-color: #94a3b8;
+    color: #0f172a;
+    transform: translateY(-1px);
+  }
+  .page-btn.active {
+    background: #2563eb;
+    border-color: #2563eb;
+    color: #ffffff;
+    font-weight: 700;
+    box-shadow: 0 2px 8px rgba(37, 99, 235, 0.35);
+  }
+  .page-btn:disabled {
+    opacity: 0.45;
+    cursor: not-allowed;
+    background: #f8fafc;
+    border-color: #e2e8f0;
+    color: #94a3b8;
+    box-shadow: none;
+    transform: none;
+  }
+  .page-ellipsis {
+    min-width: 28px;
+    height: 38px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: #94a3b8;
+    font-size: 14px;
+    font-weight: 700;
+  }
+
   /* 하단 푸터 & 방문자 카운터 */
   .archive-footer {
     margin-top: 48px;
@@ -305,10 +374,10 @@ description: "Kho lưu trữ & Tra cứu kiến thức pháp luật Việt Nam t
   }
 </style>
 
-<!-- ── 1. 상단 글로벌 네비게이션 헤더 (공식 로고 탑재) ── -->
+<!-- ── 1. 상단 글로벌 네비게이션 헤더 (공식 4색 로고 완벽 노출) ── -->
 <nav class="archive-nav">
   <a href="https://luatnao-alt.github.io/" class="archive-brand">
-    <img src="https://luatnao-alt.github.io/assets/images/logo.png" alt="LuatNao.vn Logo" class="archive-brand-logo" onerror="this.onerror=null; this.src='https://luatnao-alt.github.io/logo.png';" />
+    <img src="assets/images/logo.png" alt="LuatNao.vn Logo" class="archive-brand-logo" onerror="this.onerror=null; this.src='logo.png';" />
     <span class="archive-brand-text">LuatNao.vn</span>
     <span class="archive-brand-badge">Archive</span>
   </a>
@@ -321,7 +390,7 @@ description: "Kho lưu trữ & Tra cứu kiến thức pháp luật Việt Nam t
   </div>
 
   <a href="https://luatnao.vn" target="_blank" rel="noopener" class="btn-launch-ai">
-    ⚡ Tra Cứu Tri Thức LuatNao →
+    ⚡ LuatNao AI Trực Tuyến →
   </a>
 </nav>
 
@@ -343,7 +412,7 @@ description: "Kho lưu trữ & Tra cứu kiến thức pháp luật Việt Nam t
   </div>
 
   <div class="search-count-bar">
-    <span id="searchResultCount">Hiển thị tất cả bài viết</span>
+    <span id="searchResultCount">Đang tải danh sách bài viết...</span>
     <span>⚡ Cập nhật tự động thời gian thực từ LuatNao AI</span>
   </div>
 </div>
@@ -382,7 +451,7 @@ description: "Kho lưu trữ & Tra cứu kiến thức pháp luật Việt Nam t
 
     <div class="post-card-footer">
       <a href="{{ post.url | relative_url }}" class="post-card-link">Đọc chi tiết bài viết →</a>
-      <a href="https://luatnao.vn" target="_blank" rel="noopener" style="font-size: 11.5px; color: #64748b; text-decoration: none;">🔍 Tra Cứu Thêm</a>
+      <a href="https://luatnao.vn" target="_blank" rel="noopener" style="font-size: 11.5px; color: #64748b; text-decoration: none;">💬 Hỏi AI thêm</a>
     </div>
   </article>
 {% endfor %}
@@ -391,14 +460,17 @@ description: "Kho lưu trữ & Tra cứu kiến thức pháp luật Việt Nam t
   <div class="no-results-box" id="noResultsBox">
     <div style="font-size: 32px; margin-bottom: 8px;">🔍</div>
     <h4 style="margin: 0 0 6px 0; color: #0f172a; font-size: 16px;">Không tìm thấy bài viết phù hợp</h4>
-    <p style="margin: 0 0 16px 0; color: #64748b; font-size: 13px;">일치하는 Q&A 게시글이 없습니다. LuatNao.vn에서 LuatNao.vn에서 최신 법령 조항을 검색해 보세요!</p>
+    <p style="margin: 0 0 16px 0; color: #64748b; font-size: 13px;">일치하는 Q&A 게시글이 없습니다. LuatNao.vn에서 새로운 법률 질문을 해보세요!</p>
     <a href="https://luatnao.vn" target="_blank" rel="noopener" class="btn-launch-ai" style="display: inline-flex;">
-      ⚡ Tra Cứu Tại LuatNao.vn
+      ⚡ Hỏi LuatNao AI ngay
     </a>
   </div>
 </div>
 
-<!-- ── 4. 하단 푸터 & 실시간 방문자 카운터 (Visitor Counter) ── -->
+<!-- ── 4. 하단 동적 페이징 컨트롤 컨테이너 ── -->
+<div class="pagination-container" id="paginationContainer"></div>
+
+<!-- ── 5. 하단 푸터 & 실시간 방문자 카운터 (Visitor Counter) ── -->
 <footer class="archive-footer">
   <div style="display: flex; align-items: center; gap: 8px;">
     <img src="assets/images/logo.png" alt="LuatNao.vn" style="width: 24px; height: 24px; object-fit: contain;" onerror="this.onerror=null; this.src='logo.png';" />
@@ -421,17 +493,115 @@ description: "Kho lưu trữ & Tra cứu kiến thức pháp luật Việt Nam t
   </div>
 </footer>
 
-<!-- ── 실시간 클라이언트 검색 스크립트 ── -->
+<!-- ── 실시간 클라이언트 검색 & 페이징 스크립트 ── -->
 <script>
+  const PAGE_SIZE = 12; // 페이지당 카드 노출 개수
+  let currentPage = 1;
   let currentCategory = 'all';
   let currentTag = 'all';
+  let matchedCards = [];
+
+  function updatePagination() {
+    const totalItems = matchedCards.length;
+    const totalPages = Math.ceil(totalItems / PAGE_SIZE) || 1;
+    if (currentPage > totalPages) currentPage = totalPages;
+    if (currentPage < 1) currentPage = 1;
+
+    // 1. 모든 카드를 일단 숨긴 후, 현재 페이지에 해당하는 카드만 flex로 표시
+    const allCards = document.querySelectorAll('.post-card');
+    allCards.forEach(card => card.style.display = 'none');
+
+    const startIndex = (currentPage - 1) * PAGE_SIZE;
+    const endIndex = Math.min(startIndex + PAGE_SIZE, totalItems);
+
+    for (let i = startIndex; i < endIndex; i++) {
+      if (matchedCards[i]) {
+        matchedCards[i].style.display = 'flex';
+      }
+    }
+
+    // 2. 카운트 바 텍스트 업데이트
+    const noResults = document.getElementById('noResultsBox');
+    const countBar = document.getElementById('searchResultCount');
+
+    if (totalItems === 0) {
+      if (noResults) noResults.style.display = 'block';
+      if (countBar) countBar.innerText = 'Không có kết quả nào (일치하는 게시글 없음)';
+    } else {
+      if (noResults) noResults.style.display = 'none';
+      const rangeText = (startIndex + 1) + ' - ' + endIndex;
+      if (countBar) {
+        countBar.innerText = 'Hiển thị ' + rangeText + ' / ' + totalItems + ' bài viết (Trang ' + currentPage + '/' + totalPages + ')';
+      }
+    }
+
+    // 3. 페이지네이션 버튼 바 렌더링
+    renderPaginationControls(totalPages);
+  }
+
+  function renderPaginationControls(totalPages) {
+    const container = document.getElementById('paginationContainer');
+    if (!container) return;
+
+    if (totalPages <= 1) {
+      container.innerHTML = '';
+      return;
+    }
+
+    let html = '';
+
+    // [« Trang trước] (이전 버튼)
+    const prevDisabled = currentPage === 1 ? 'disabled' : '';
+    html += '<button class="page-btn" ' + prevDisabled + ' onclick="goToPage(' + (currentPage - 1) + ')" title="Trang trước">« Trước</button>';
+
+    // 스마트 페이지 번호 생성 로직 (1 ... 4 5 6 ... 12)
+    const visiblePages = [];
+    if (totalPages <= 7) {
+      for (let i = 1; i <= totalPages; i++) visiblePages.push(i);
+    } else {
+      visiblePages.push(1);
+      if (currentPage > 3) visiblePages.push('...');
+      
+      const start = Math.max(2, currentPage - 1);
+      const end = Math.min(totalPages - 1, currentPage + 1);
+      for (let i = start; i <= end; i++) {
+        if (!visiblePages.includes(i)) visiblePages.push(i);
+      }
+      
+      if (currentPage < totalPages - 2) visiblePages.push('...');
+      if (!visiblePages.includes(totalPages)) visiblePages.push(totalPages);
+    }
+
+    visiblePages.forEach(p => {
+      if (p === '...') {
+        html += '<span class="page-ellipsis">...</span>';
+      } else {
+        const isActive = p === currentPage ? 'active' : '';
+        html += '<button class="page-btn ' + isActive + '" onclick="goToPage(' + p + ')">' + p + '</button>';
+      }
+    });
+
+    // [Trang sau »] (다음 버튼)
+    const nextDisabled = currentPage === totalPages ? 'disabled' : '';
+    html += '<button class="page-btn" ' + nextDisabled + ' onclick="goToPage(' + (currentPage + 1) + ')" title="Trang sau">Sau »</button>';
+
+    container.innerHTML = html;
+  }
+
+  function goToPage(page) {
+    currentPage = page;
+    updatePagination();
+    const targetElement = document.getElementById('liveSearchInput') || document.getElementById('postsGrid');
+    if (targetElement) {
+      targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }
 
   function handleLiveSearch() {
     const query = (document.getElementById('liveSearchInput').value || '').toLowerCase().trim();
-    const cards = document.querySelectorAll('.post-card');
-    let visibleCount = 0;
-
-    cards.forEach(card => {
+    const cards = Array.from(document.querySelectorAll('.post-card'));
+    
+    matchedCards = cards.filter(card => {
       const title = card.getAttribute('data-title') || '';
       const desc = card.getAttribute('data-desc') || '';
       const categories = card.getAttribute('data-categories') || '';
@@ -441,24 +611,11 @@ description: "Kho lưu trữ & Tra cứu kiến thức pháp luật Việt Nam t
       const matchesCategory = currentCategory === 'all' || categories.includes(currentCategory) || tags.includes(currentCategory) || title.includes(currentCategory);
       const matchesTag = currentTag === 'all' || tags.includes(currentTag) || categories.includes(currentTag);
 
-      if (matchesQuery && matchesCategory && matchesTag) {
-        card.style.display = 'flex';
-        visibleCount++;
-      } else {
-        card.style.display = 'none';
-      }
+      return matchesQuery && matchesCategory && matchesTag;
     });
 
-    const noResults = document.getElementById('noResultsBox');
-    const countBar = document.getElementById('searchResultCount');
-
-    if (visibleCount === 0) {
-      if (noResults) noResults.style.display = 'block';
-      if (countBar) countBar.innerText = 'Không có kết quả nào (검색 결과 없음)';
-    } else {
-      if (noResults) noResults.style.display = 'none';
-      if (countBar) countBar.innerText = 'Hiển thị ' + visibleCount + ' / ' + cards.length + ' bài viết (' + visibleCount + '개 표시 중)';
-    }
+    currentPage = 1; // 필터 또는 검색어 변경 시 1페이지로 리셋
+    updatePagination();
   }
 
   function setCategoryFilter(cat, elem) {
@@ -474,4 +631,11 @@ description: "Kho lưu trữ & Tra cứu kiến thức pháp luật Việt Nam t
     if (elem) elem.classList.add('active');
     handleLiveSearch();
   }
+
+  // 초기 로드 시 페이징 활성화
+  document.addEventListener('DOMContentLoaded', () => {
+    handleLiveSearch();
+  });
+  // 즉시 실행 fallback
+  handleLiveSearch();
 </script>
