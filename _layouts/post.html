@@ -1,0 +1,53 @@
+---
+layout: default
+---
+<article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">{{ page.title | escape }}</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+        {{ page.date | date: "%Y-%m-%d" }}
+      </time>
+      {%- if page.author -%}
+        • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">{{ page.author }}</span></span>
+      {%- endif -%}
+    </p>
+  </header>
+
+  <!-- 📢 상단 페이스북 공식 채널 연동 바 (Top CTA Bar) -->
+  <div style="background: #eff6ff; border: 1px solid #bfdbfe; border-radius: 12px; padding: 14px 20px; margin: 20px 0 28px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; box-shadow: 0 2px 8px rgba(37, 99, 235, 0.08);">
+    <div style="display: flex; align-items: center; gap: 12px;">
+      <span style="font-size: 24px;">📢</span>
+      <div>
+        <strong style="color: #1e40af; font-size: 15px; display: block; margin-bottom: 2px;">LuatNao 공식 페이스북 페이지 오픈!</strong>
+        <p style="margin: 0; font-size: 13px; color: #3b82f6;">매일 업데이트되는 베트남 최신 법률·세무·노동법 Q&A 소식을 페이스북 피드에서 가장 빠르게 받아보세요.</p>
+      </div>
+    </div>
+    <a href="https://facebook.com/luatnaovn" target="_blank" rel="noopener noreferrer" style="background: #1877f2; color: #ffffff; padding: 10px 18px; border-radius: 8px; font-weight: bold; font-size: 13px; text-decoration: none; display: inline-flex; align-items: center; gap: 6px; box-shadow: 0 4px 12px rgba(24, 119, 242, 0.28); transition: all 0.2s ease;">
+      <span>👍</span> 페이스북 팔로우하기 (@luatnaovn)
+    </a>
+  </div>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    {{ content }}
+  </div>
+
+  <!-- 🚀 하단 전환 배너 (Bottom Conversion Box) -->
+  <div style="margin-top: 45px; padding: 26px; background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); border-radius: 16px; color: #ffffff; box-shadow: 0 12px 28px rgba(0,0,0,0.2); border: 1px solid rgba(255,255,255,0.12);">
+    <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 12px;">
+      <span style="font-size: 26px;">⚖️</span>
+      <h3 style="margin: 0; color: #ffffff; font-size: 18px; font-weight: bold;">베트남 법률 & 전사 인사노무 올인원 솔루션 - LuatNao</h3>
+    </div>
+    <p style="margin: 0 0 20px; color: #cbd5e1; font-size: 14px; line-height: 1.6;">
+      베트남 진출 기업 및 교민을 위한 실시간 AI 법률 질의응답과 근태·급여·사회보험·계약서 37개 모듈 전사 인사관리 플랫폼을 지금 바로 경험해 보세요.
+    </p>
+    <div style="display: flex; flex-wrap: wrap; gap: 14px;">
+      <a href="https://facebook.com/luatnaovn" target="_blank" rel="noopener noreferrer" style="background: #1877f2; color: #ffffff; padding: 11px 20px; border-radius: 10px; font-weight: bold; font-size: 14px; text-decoration: none; display: inline-flex; align-items: center; gap: 8px; box-shadow: 0 4px 14px rgba(24, 119, 242, 0.35);">
+        <span>👍</span> 공식 페이스북 팔로우 (@luatnaovn)
+      </a>
+      <a href="https://luatnao.vn" target="_blank" rel="noopener noreferrer" style="background: #10b981; color: #ffffff; padding: 11px 20px; border-radius: 10px; font-weight: bold; font-size: 14px; text-decoration: none; display: inline-flex; align-items: center; gap: 8px; box-shadow: 0 4px 14px rgba(16, 185, 129, 0.35);">
+        <span>⚡</span> LuatNao 플랫폼 14일 무료 체험
+      </a>
+    </div>
+  </div>
+</article>
